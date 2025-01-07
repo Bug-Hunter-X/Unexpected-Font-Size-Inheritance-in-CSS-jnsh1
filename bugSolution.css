@@ -1,0 +1,17 @@
+To fix this, explicitly set the `font-size` for the `p` element within the `.container`:
+
+```css
+div {
+  font-size: 16px;
+}
+
+.container div {
+  font-size: 18px;
+}
+
+.container p {
+  font-size: 20px; /* Explicitly set font size */
+}
+```
+
+This ensures that the `p` element has the desired `font-size` and doesn't inherit it from the `div` element due to CSS inheritance and specificity rules.
