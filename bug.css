@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon error related to specificity and inheritance:
+
+```css
+div {
+  font-size: 16px;
+}
+
+.container div {
+  font-size: 18px;
+}
+
+.container p {
+  font-size: 20px; /* This will unexpectedly inherit font-size from .container div */
+}
+```
+
+The issue is that the `p` element inside the `.container` inherits the `font-size` from the more specific `div` selector due to inheritance, even though it does not have a direct font size applied to it. This can lead to unexpected styling results.
